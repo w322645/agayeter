@@ -101,13 +101,6 @@ client.on("message", (message) => {
   )
     return message.channel.send(embed); //
 });
-const express = require('express');//AGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA PORT\\
-const app = express();
- 
-app.get("/", (request, response) => {
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
 //--\\
 //AYARLAMALI OTO İSİM\\
 client.on("guildMemberAdd", (member) => {
