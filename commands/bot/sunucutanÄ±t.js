@@ -26,7 +26,7 @@ if(!kişi) return message.channel.send(new discord.MessageEmbed().setColor('#363
 
       client.channels.cache.get("818565209198952490").send(embed);
       return message.channel.send(
-        `Sunucunu destek sunucumda tanıttım => \n\n →  https://discord.gg/efda`
+        `Sunucunu destek sunucumda tanıttım => \n\n →  https://discord.gg/QcVuqR39`
       );
     });
   }
