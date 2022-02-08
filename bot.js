@@ -393,6 +393,11 @@ client.reload = (command) => {
 };
 
 //FAKE GİR ÇIK   -KATIL- dert ettiğin şeye bak aq
+
+
+//      SAHİP İD YÖNLENDİRİCİ
+const sözügerçek = require('./config')
+//
 client.on("message", async (message) => {
   if (!message.guild) {
     return;
@@ -401,7 +406,7 @@ client.on("message", async (message) => {
   if (!prefix) {
     var prefix = "?";
   }
-  if (message.author.id === "275926652842934272") {
+  if (message.author.id === sözügerçek.sahip ) {
     if (message.content === prefix + "fgir") {
       // Buraya ne yazarsanız yazdığınız şeye göre çalışır
       client.emit(
@@ -420,7 +425,7 @@ client.on("message", async (message) => {
   if (!prefix) {
     var prefix = "?";
   }
-  if (message.author.id === "275926652842934272") {
+  if (message.author.id === sözügerçek.sahip) {
     if (message.content === prefix + "fçık") {
       // Buraya ne yazarsanız yazdığınız şeye göre çalışır
       client.emit(
