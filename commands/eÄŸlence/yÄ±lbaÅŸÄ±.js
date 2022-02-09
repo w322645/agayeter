@@ -3,8 +3,8 @@ const ms = require("parse-ms");
 
 exports.run = async (client, message, args) => {
 
-  let yilbasi = new Date("2022-01-01 00:00:00");
-  let zaman = ms(yilbasi - Date.now());//MATADOR
+  let yilbasi = new Date("2023-01-01 00:00:00");
+  let zaman = ms(yilbasi - Date.now());
 
 return message.channel.send(
     `:label: **Yılbaşının kutlanmasına Dair Bilgiler Aşağıda;** \n\n> Gün: **${zaman.days}** \n> Saat: **${zaman.hours}** \n> Dakika: **${zaman.minutes}** \n\n:white_check_mark: **Yılbaşının kutlanmasına Bu Kadar Zaman Kaldı!**`
