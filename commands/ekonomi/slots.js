@@ -1,36 +1,43 @@
 const Discord = require('discord.js');
-const Database = require("plasma-db");
-const db = require('quick.db') 
-const slots = ['1','10','5','100','5000','3000','2000','1000','360','2670','5100','1670','1690','20000']
-exports.run = function(client, message, args) {
+const db = require('quick.db')
+const { Command } = require('discord.js-commando');
+const { stripIndents } = require('common-tags');
+const slots = ['🥒', '🍎', '🍅', '🍋', '🐻'];
+
+exports.run = function(client, message) {
 
     var slot1 = slots[Math.floor(Math.random() * slots.length)];
-  
-    if (slot1) {
-        message.channel.send(`
+    var slot2 = slots[Math.floor(Math.random() * slots.length)];
+    var slot3 = slots[Math.floor(Math.random() * slots.length)];
 
-        ${slot1} Kazandın
+     var paras = ["5000000"];
+      var parasik = paras[Math.floor(Math.random() * paras.length)];
+
+      
+    if (slot1 === slot2 && slot1 === slot3) {
+       db.add(`para_${message.author.id}`, parasik)
+        message.channel.send(stripIndents`
+        ${slot1} : ${slot2} : ${slot3}
+        Tebrikler, kazandınız!
         `);
-        db.add(`para_${message.author.id}`, slot1)
     } else {
-        message.channel.send(`
-        ${slots}
+        message.channel.send(stripIndents`
+        ${slot1} : ${slot2} : ${slot3}
+        Eyvah, kaybettin!
+        `);   
+    }
 
-        Kaybettin
-        `);
-        db.delete(`para_${message.author.id}`, slots)
-  }
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['slots'],
-  permLevel: 4
+  aliases: [],
+  permLevel: 0
 };
 
 exports.help = {
-  name: 'slots',
+  name: 'slot',
   description: 'Slots oyunu oynatır',
-  usage: 'slots'
-}; 
+  usage: 'slot'
+};
