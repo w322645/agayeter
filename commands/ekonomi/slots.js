@@ -10,7 +10,7 @@ exports.run = function(client, message) {
     var slot2 = slots[Math.floor(Math.random() * slots.length)];
     var slot3 = slots[Math.floor(Math.random() * slots.length)];
 
-     var paras = ["5000000"];
+     var paras = ["320000"];
       var parasik = paras[Math.floor(Math.random() * paras.length)];
 
       
@@ -21,6 +21,7 @@ exports.run = function(client, message) {
         Tebrikler, kazandınız!
         `);
     } else {
+      db.subtract(`para_${message.author.id}`,640000)
         message.channel.send(stripIndents`
         ${slot1} : ${slot2} : ${slot3}
         Eyvah, kaybettin!
