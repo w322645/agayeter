@@ -15,7 +15,7 @@ const cevaplar = [
 `Para Havaya Atıldı <a:efdacoin:942809802042650644> \n\n ❌**Kaybettiniz** \`${-oynamak}\``
 ];
   
-    if (parapara < oynamak) return message.reply(`Para Miktarından Büyük bir Para Miktarıyla Slot Oyununu Oynayamassın :( \n\n **Paranız**\`${parapara}\``)
+    if (parapara < oynamak) return message.reply(`Para Miktarından Büyük bir Para Miktarıyla Yazı Tura Oyununu Oynayamassın :( \n\n **Paranız**\`${parapara}\``)
   
     if (isNaN(oynamak)) return message.reply('Para Miktarını Nası Sayısız Yazıcaksın?')
 
