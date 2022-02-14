@@ -11,8 +11,8 @@ exports.run = function(client, message, args) {
     
 	let parapara = db.fetch(`para_${message.author.id}`) || 0  
 const cevaplar = [
-	`Para Havaya Atıldı  \n\n **Kazandınız** \`${+oynamak}\``,
-`Para Havaya Atıldı  \n\n **Kaybettiniz** \`${-oynamak}\``
+`Para Havaya Atıldı <a:efdacoin:942809802042650644>  \n\n ✅**Kazandınız** \`${+oynamak}\``,
+`Para Havaya Atıldı <a:efdacoin:942809802042650644> \n\n ❌**Kaybettiniz** \`${-oynamak}\``
 ];
   
     if (parapara < oynamak) return message.reply(`Para Miktarından Büyük bir Para Miktarıyla Slot Oyununu Oynayamassın :( \n\n **Paranız**\`${parapara}\``)
@@ -21,17 +21,17 @@ const cevaplar = [
 
 	var cevap = cevaplar[Math.floor(Math.random() * cevaplar.length)];
 	
-	if (cevap === `Para Havaya Atıldı  \n\n **Kazandınız** \`${+oynamak}\``) {
+	if (cevap === `Para Havaya Atıldı <a:efdacoin:942809802042650644>  \n\n ✅**Kazandınız** \`${+oynamak}\``) {
         db.add(`para_${message.author.id}`, +oynamak)
 		 const embedyazı = new Discord.MessageEmbed()
-		.setColor(0xf4b942)
+		.setColor("GREEN")
 		.setDescription(cevap)
 		message.channel.send(embedyazı);
 		
-	} else if (cevap === `Para Havaya Atıldı  \n\n **Kaybettiniz** \`${-oynamak}\``) {
+	} else if (cevap === `Para Havaya Atıldı <a:efdacoin:942809802042650644> \n\n ❌**Kaybettiniz** \`${-oynamak}\``) {
 		db.add(`para_${message.author.id}`,-oynamak)
 		const embedtura = new Discord.MessageEmbed()
-		.setColor(0xf4b942)
+		.setColor("RED")
 		.setDescription(cevap)
 	
 		message.channel.send(embedtura);
