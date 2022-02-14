@@ -18,7 +18,7 @@ exports.run = function(client, message, args) {
 
 let parapara = db.fetch(`para_${message.author.id}`) || 0  
 
-if (parapara < oynamak) return message.reply('Para Miktarından Büyük bir Para Miktarıyla Slot Oyununu Oynayamassın :(')
+if (parapara < oynamak) return message.reply(`Para Miktarından Büyük bir Para Miktarıyla Slot Oyununu Oynayamassın :( \n\n **Paranız**\`${parapara}\``)
       
     if (slot1 === slot2 && slot1 === slot3) {
        db.add(`para_${message.author.id}`, +oynamak)
@@ -26,7 +26,7 @@ if (parapara < oynamak) return message.reply('Para Miktarından Büyük bir Para
         ${slot1} : ${slot2} : ${slot3}
         Tebrikler, kazandınız!
 
-   
+    Kazancınız = \`${+oynamak}\`
         `);
     } else {
       db.add(`para_${message.author.id}`,-oynamak)
@@ -34,7 +34,7 @@ if (parapara < oynamak) return message.reply('Para Miktarından Büyük bir Para
         ${slot1} : ${slot2} : ${slot3}
         Eyvah, kaybettin!
 
-        
+        Kaybettiğiniz = \`${-oynamak}\`
         `);   
     }
   
@@ -43,7 +43,7 @@ if (parapara < oynamak) return message.reply('Para Miktarından Büyük bir Para
 
 exports.conf = {
   enabled: true,
-  guildOnly: false,
+  guildOnly: true,
   aliases: [],
   permLevel: 0
 };
