@@ -8,6 +8,9 @@ const Canvas = require('canvas')
 const request = require('node-superfetch');
 
 exports.run = async (client, message, args) => {
+  
+  message.channel.send('Veriler Toplanıyor Bekleyiniz').then(x => {x.delete({timeout: 3555})});
+  
 var kişi = message.mentions.users.first()|| message.author
 var bıçak =  db.fetch(`bıçak_${kişi.id}`) || 'yok'
 var silah =  db.fetch(`silah_${kişi.id}`) || 'yok'
