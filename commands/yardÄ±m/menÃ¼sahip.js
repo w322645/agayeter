@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
     .setTitle("🔥BUYUR SAHİP🔥")
     .setTimestamp()
     .setDescription(
-      `> **${prefix}hastebin** : Hastebin De Link Paylaşarak Yazı Veya Kod Paylaşırsınız.> **${prefix}sahip-ban** : Sadece Botun Sahibi Kullanabilceği Bir Ban Kodu. \n> **${prefix}dm** : Bir Kşiye Dm Yoluyla Msj Atma\n> **${prefix}bakım** : Botu Bakım Moduna Sokar\n> **${prefix}ayrıl** : Yazılan Sunucudan Bot Çıkış Yapar\n> **${prefix}eval** : Eval Komut Test\n> **${prefix}avatar-ayarla** : Botun Resmini Değiştirirsiniz\n> **${prefix}komutlar** : Komutların Sayısı Ve komutlar\n> **${prefix}bot-restart** : Bota Restart Atarsınız\n> **${prefix}kaç-cm** : Kaç Santim\n> **${prefix}fçık** : Fake Veri Tabanlı Çıkış\n> **${prefix}fgir** : Fake Veri Tabanlı Giriş\n> **${prefix}sönmezreis** : Sönmez Reis Küfürlü\n`
+      `> **${prefix}para-ekle** : Etiketlenen Kişiye Belirtilen Miktarda Para Ekler (Ekonomi Modu).\n> **${prefix}hastebin** : Hastebin De Link Paylaşarak Yazı Veya Kod Paylaşırsınız.\n> **${prefix}sahip-ban** : Sadece Botun Sahibi Kullanabilceği Bir Ban Kodu. \n> **${prefix}dm** : Bir Kşiye Dm Yoluyla Msj Atma\n> **${prefix}bakım** : Botu Bakım Moduna Sokar\n> **${prefix}ayrıl** : Yazılan Sunucudan Bot Çıkış Yapar\n> **${prefix}eval** : Eval Komut Test\n> **${prefix}avatar-ayarla** : Botun Resmini Değiştirirsiniz\n> **${prefix}komutlar** : Komutların Sayısı Ve komutlar\n> **${prefix}bot-restart** : Bota Restart Atarsınız\n> **${prefix}kaç-cm** : Kaç Santim\n> **${prefix}fçık** : Fake Veri Tabanlı Çıkış\n> **${prefix}fgir** : Fake Veri Tabanlı Giriş\n> **${prefix}sönmezreis** : Sönmez Reis Küfürlü\n`
     )
     .setImage(
       ""

@@ -73,11 +73,11 @@ exports.run = async (client, message, args) => {   if (message.author.bot) retur
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  permLevel: 0,
+  permLevel: 4,
   aliases: []
 }
 exports.help = {
-    name: "rol",
+    name: "test",
     description: "Gelişmiş Yardım",
     usage: "<prefix>yardım",
 }
